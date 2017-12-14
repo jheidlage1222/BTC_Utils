@@ -34,9 +34,9 @@
             this.gbOutput = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.gbParamCtrls = new System.Windows.Forms.GroupBox();
-            this.tBoxPrincipalAmt = new System.Windows.Forms.TextBox();
-            this.tBoxPurchaseFee = new System.Windows.Forms.TextBox();
             this.tBoxSellFee = new System.Windows.Forms.TextBox();
+            this.tBoxPurchaseFee = new System.Windows.Forms.TextBox();
+            this.tBoxPrincipalAmt = new System.Windows.Forms.TextBox();
             this.gbOutput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.gbParamCtrls.SuspendLayout();
@@ -67,6 +67,7 @@
             this.btnDoCalcs.TabIndex = 2;
             this.btnDoCalcs.Text = "Generate Forecasts";
             this.btnDoCalcs.UseVisualStyleBackColor = true;
+            this.btnDoCalcs.Click += new System.EventHandler(this.btnDoCalcs_Click);
             // 
             // gbOutput
             // 
@@ -102,12 +103,12 @@
             this.gbParamCtrls.TabStop = false;
             this.gbParamCtrls.Text = "Input Params";
             // 
-            // tBoxPrincipalAmt
+            // tBoxSellFee
             // 
-            this.tBoxPrincipalAmt.Location = new System.Drawing.Point(7, 118);
-            this.tBoxPrincipalAmt.Name = "tBoxPrincipalAmt";
-            this.tBoxPrincipalAmt.Size = new System.Drawing.Size(100, 23);
-            this.tBoxPrincipalAmt.TabIndex = 0;
+            this.tBoxSellFee.Location = new System.Drawing.Point(276, 118);
+            this.tBoxSellFee.Name = "tBoxSellFee";
+            this.tBoxSellFee.Size = new System.Drawing.Size(100, 23);
+            this.tBoxSellFee.TabIndex = 2;
             // 
             // tBoxPurchaseFee
             // 
@@ -116,12 +117,12 @@
             this.tBoxPurchaseFee.Size = new System.Drawing.Size(100, 23);
             this.tBoxPurchaseFee.TabIndex = 1;
             // 
-            // tBoxSellFee
+            // tBoxPrincipalAmt
             // 
-            this.tBoxSellFee.Location = new System.Drawing.Point(276, 118);
-            this.tBoxSellFee.Name = "tBoxSellFee";
-            this.tBoxSellFee.Size = new System.Drawing.Size(100, 23);
-            this.tBoxSellFee.TabIndex = 2;
+            this.tBoxPrincipalAmt.Location = new System.Drawing.Point(7, 118);
+            this.tBoxPrincipalAmt.Name = "tBoxPrincipalAmt";
+            this.tBoxPrincipalAmt.Size = new System.Drawing.Size(100, 23);
+            this.tBoxPrincipalAmt.TabIndex = 0;
             // 
             // frmMain
             // 

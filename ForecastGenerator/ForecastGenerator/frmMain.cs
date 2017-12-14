@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.IO;
+using ForecastGenerator.Classes;
 
 namespace ForecastGenerator
 {
     public partial class frmMain : Form
     {
+        private ForecastDTO calcDataContainer;
         private string[] OutColNames = new string[]
             {
                 "length", "start", "finish", "current", "min", "max", "total change", "avg daily change",
@@ -52,14 +55,20 @@ namespace ForecastGenerator
             //
             dgvCtrl.Columns.Clear();
             //
-            //dgvCtrl.Columns.Add("Length", "Length");
-            //dgvCtrl.Columns.Add("Start", "Start");
             foreach (string colName in colNames)
             {
                 dgvCtrl.Columns.Add(colName, colName);
             }
         }
 
-        
+        private void btnDoCalcs_Click(object sender, EventArgs e)
+        {
+            var outputDGV = this.gbOutput.Controls["dgvData"] as DataGridView;
+            outputDGV.Rows.Clear();
+            //Open up the history CSV and let's go to work
+            string historyFilePath = this.txtHistoryFilePath.Text;
+            
+
+        }
     }
 }
