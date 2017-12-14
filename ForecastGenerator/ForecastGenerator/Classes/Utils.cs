@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,10 @@ namespace ForecastGenerator.Classes
 {
     public static class Utils
     {
-        public static void LoadForecastDTO(ForecastDTO loadObject, string historicalCSVPath)
+        public static void LoadForecastDTO(ForecastDTO loadObject, string historicalCSVPath = null)
         {
+            
+            if (historicalCSVPath == null) historicalCSVPath = ConfigurationManager.AppSettings["historyDataPath"];
             using (var stream = new FileStream(historicalCSVPath, FileMode.Open))
             {
                 using (var reader = new StreamReader(stream))
